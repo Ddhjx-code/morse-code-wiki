@@ -2,9 +2,9 @@ import Link from 'next/link';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Translator' },
+  { href: '/audio', label: 'Audio' },
   { href: '/alphabet', label: 'Alphabet' },
   { href: '/chart', label: 'Chart' },
-  { href: '/audio', label: 'Audio' },
   { href: '/tattoo-generator', label: 'Tattoo' },
   { href: '/practice', label: 'Practice' },
   { href: '/learn', label: 'Learn' },
