@@ -36,11 +36,13 @@ export const metadata: Metadata = {
     locale: "en_US",
     siteName: "MorseCodeNow",
     url: BASE_URL,
+    images: [{ url: "/og-image.png", width: 1200, height: 630, alt: "MorseCodeNow - Morse Code Translator" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Morse Code Translator - Encode & Decode Instantly",
     description: "Free online Morse code translator with audio playback, tattoo generator, alphabet chart, and practice tools.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
