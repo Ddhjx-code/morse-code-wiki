@@ -127,6 +127,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable} dark`}>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SWWLW57DQ" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-1SWWLW57DQ');`,
+          }}
+        />
+      </head>
       <body className="min-h-screen flex flex-col bg-gray-950 text-gray-100 font-sans antialiased">
         <script
           type="application/ld+json"
