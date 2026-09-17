@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import ILoveYouAudio from './ILoveYouAudio';
+import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
   title: 'I Love You in Morse Code - Pattern, Sound & Uses',
@@ -151,6 +152,7 @@ export default function ILoveYouPage() {
           </Link>
         </div>
       </section>
+      <AdBanner />
     </div>
   );
 }

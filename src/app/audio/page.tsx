@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import AudioTranslator from './AudioTranslator';
 import Link from 'next/link';
+import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
   title: 'Morse Code Audio Translator - Listen & Decode Sound',
@@ -91,6 +92,7 @@ export default function AudioPage() {
           </Link>
         </div>
       </section>
+      <AdBanner />
     </div>
   );
 }

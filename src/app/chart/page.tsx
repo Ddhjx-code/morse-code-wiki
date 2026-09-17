@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { CHAR_TO_MORSE } from '@/lib/morse';
 import Link from 'next/link';
+import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
   title: 'Morse Code Chart - Printable PDF Reference Sheet',
@@ -177,6 +178,7 @@ export default function ChartPage() {
           </Link>
         </div>
       </section>
+      <AdBanner />
     </div>
   );
 }

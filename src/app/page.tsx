@@ -1,4 +1,5 @@
 import MorseTranslator from '@/components/MorseTranslator';
+import AdBanner from '@/components/AdBanner';
 import Link from 'next/link';
 
 export default function Home() {
@@ -19,6 +20,8 @@ export default function Home() {
       <section className="mb-16">
         <MorseTranslator />
       </section>
+
+      <AdBanner />
 
       {/* Quick Links */}
       <section className="max-w-4xl mx-auto">

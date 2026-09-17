@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
   title: 'How to Learn Morse Code - Complete Beginner Guide',
@@ -199,6 +200,7 @@ export default function LearnPage() {
           </Link>
         </div>
       </section>
+      <AdBanner />
     </div>
   );
 }

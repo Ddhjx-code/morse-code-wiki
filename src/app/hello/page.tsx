@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import HelloAudio from './HelloAudio';
+import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
   title: 'Hello in Morse Code - Pattern, Sound & Examples',
@@ -130,6 +131,7 @@ export default function HelloPage() {
           </Link>
         </div>
       </section>
+      <AdBanner />
     </div>
   );
 }
