@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CHAR_TO_MORSE } from '@/lib/morse';
+import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
   title: 'Morse Code Numbers - Complete 0-9 Chart & Examples',
@@ -141,6 +142,7 @@ export default function NumbersPage() {
           </Link>
         </div>
       </section>
+      <AdBanner />
     </div>
   );
 }

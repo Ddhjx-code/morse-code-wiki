@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { CHAR_TO_MORSE } from '@/lib/morse';
 import Link from 'next/link';
+import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
   title: 'Morse Code Alphabet - Complete A-Z Chart with Numbers & Symbols',
@@ -214,6 +215,7 @@ export default function AlphabetPage() {
           </Link>
         </div>
       </section>
+      <AdBanner />
     </div>
   );
 }

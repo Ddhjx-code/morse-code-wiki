@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import PracticeGame from './PracticeGame';
+import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
   title: 'Morse Code Practice - Learn by Listening',
@@ -56,6 +57,7 @@ export default function PracticePage() {
           </div>
         </div>
       </section>
+      <AdBanner />
     </div>
   );
 }
