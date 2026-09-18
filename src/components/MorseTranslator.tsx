@@ -3,10 +3,14 @@
 import { useState, useCallback, useRef } from 'react';
 import { textToMorse, morseToText, playMorseAudio } from '@/lib/morse';
 
-export default function MorseTranslator() {
+interface MorseTranslatorProps {
+  initialMode?: 'textToMorse' | 'morseToText';
+}
+
+export default function MorseTranslator({ initialMode = 'textToMorse' }: MorseTranslatorProps) {
   const [text, setText] = useState('');
   const [morse, setMorse] = useState('');
-  const [mode, setMode] = useState<'textToMorse' | 'morseToText'>('textToMorse');
+  const [mode, setMode] = useState<'textToMorse' | 'morseToText'>(initialMode);
   const [isPlaying, setIsPlaying] = useState(false);
   const [copied, setCopied] = useState(false);
   const playerRef = useRef<{ stop: () => void } | null>(null);
