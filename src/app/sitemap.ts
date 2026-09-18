@@ -1,4 +1,5 @@
 import type { MetadataRoute } from 'next';
+import { MORSE_UNITS } from '@/data/morse-units';
 
 const BASE_URL = 'https://morsecodenow.com';
 
@@ -24,5 +25,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'yearly', priority: 0.5 },
     { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'yearly', priority: 0.4 },
     { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    ...MORSE_UNITS.map(unit => ({
+      url: `${BASE_URL}/${unit.key.toLowerCase()}-in-morse-code`,
+      lastModified: now,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
   ];
 }
