@@ -4,6 +4,7 @@ import { CHAR_TO_MORSE } from '@/lib/morse';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/numbers' },
   title: 'Morse Code Numbers - Complete 0-9 Chart & Examples',
   description:
     'Morse code numbers explained: complete 0-9 chart, the pattern rule that makes them easy to memorize, and examples of how to send multi-digit numbers like 2026 and 143.',

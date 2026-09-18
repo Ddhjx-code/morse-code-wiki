@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/contact' },
   title: 'Contact Us - MorseCodeNow',
   description:
     'Contact MorseCodeNow. Send us feedback, report bugs, suggest new Morse code tools, or ask a question about Morse code.',

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/alphabet' },
   title: 'Morse Code Alphabet - Complete A-Z Chart with Numbers & Symbols',
   description:
     'Complete Morse code alphabet chart showing all 26 letters A to Z, numbers 0-9, and punctuation marks. Includes memory tips and audio for each character.',

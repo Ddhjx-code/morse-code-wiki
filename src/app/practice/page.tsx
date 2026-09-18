@@ -3,6 +3,7 @@ import PracticeGame from './PracticeGame';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/practice' },
   title: 'Morse Code Practice - Learn by Listening',
   description:
     'Practice Morse code online for free. Listen to audio and identify letters. Gradually increase difficulty from beginner to advanced. Track your progress.',

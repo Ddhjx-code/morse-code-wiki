@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import TattooGenerator from './TattooGenerator';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/tattoo-generator' },
   title: 'Morse Code Tattoo Generator - Design Your Custom Tattoo',
   description:
     'Free Morse code tattoo generator. Convert any text into a visual dot-and-dash design ready for your tattoo artist. Choose from multiple styles: linear, bracelet, vertical.',

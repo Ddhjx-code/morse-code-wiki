@@ -4,6 +4,7 @@ import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/chart' },
   title: 'Morse Code Chart - Printable PDF Reference Sheet',
   description:
     'Free printable Morse code chart with letters A-Z, numbers 0-9, and common symbols. Download as PDF or print directly from your browser. Includes binary tree decoder.',
