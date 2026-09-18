@@ -4,6 +4,7 @@ import HelloAudio from './HelloAudio';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/hello' },
   title: 'Hello in Morse Code - Pattern, Sound & Examples',
   description:
     'Hello in Morse code is .... . .-.. .-.. ---. Learn the letter-by-letter pattern, listen to the audio, and see how to say common greetings in Morse code.',

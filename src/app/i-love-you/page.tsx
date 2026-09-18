@@ -4,6 +4,7 @@ import ILoveYouAudio from './ILoveYouAudio';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/i-love-you' },
   title: 'I Love You in Morse Code - Pattern, Sound & Uses',
   description:
     'I Love You in Morse code is ·· / ·-·· --- ···- · / -·-- --- ··-. Learn the pattern, listen to audio, and discover uses for bracelets, tattoos, and necklaces.',

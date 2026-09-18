@@ -15,9 +15,6 @@ export const metadata: Metadata = {
     "Free online Morse code translator. Convert text to Morse code and decode Morse to text instantly. Play audio, generate tattoo designs, learn the alphabet, and practice.",
   keywords:
     "morse code translator, morse code, morse code alphabet, morse code decoder, morse code generator, morse code audio, morse code chart",
-  alternates: {
-    canonical: BASE_URL,
-  },
   openGraph: {
     title: "Morse Code Translator - Encode & Decode Instantly",
     description: "Free online Morse code translator with audio playback, tattoo generator, alphabet chart, and practice tools.",

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/privacy' },
   title: 'Privacy Policy - MorseCodeNow',
   description:
     'Privacy Policy for MorseCodeNow.com. Learn how we handle data, cookies, third-party advertising, and analytics. We do not collect personal information.',

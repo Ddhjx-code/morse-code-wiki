@@ -1,6 +1,11 @@
+import type { Metadata } from 'next';
 import MorseTranslator from '@/components/MorseTranslator';
 import AdBanner from '@/components/AdBanner';
 import Link from 'next/link';
+
+export const metadata: Metadata = {
+  alternates: { canonical: '/' },
+};
 
 export default function Home() {
   return (

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/about' },
   title: 'About MorseCodeNow - Free Morse Code Tools & Learning Resources',
   description:
     'About MorseCodeNow: a free online Morse code translator, audio player, alphabet reference, tattoo generator, and practice tool. Learn what we offer and why it is free.',

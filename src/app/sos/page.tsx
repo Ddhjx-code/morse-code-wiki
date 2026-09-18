@@ -4,6 +4,7 @@ import SOSAudio from './SOSAudio';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/sos' },
   title: 'SOS in Morse Code - Signal Pattern, Sound & How to Use',
   description:
     'SOS in Morse code is ··· ——— ··· (3 dots, 3 dashes, 3 dots). Learn the signal pattern, hear the audio, and know how to use it with flashlight, tapping, or sound in emergencies.',

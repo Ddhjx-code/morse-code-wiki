@@ -3,6 +3,7 @@ import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/learn' },
   title: 'How to Learn Morse Code - Complete Beginner Guide',
   description:
     'Learn Morse code step by step. Complete beginner guide covering the Koch method, Farnsworth technique, practice schedule, memory tricks, and common mistakes to avoid.',

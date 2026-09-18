@@ -4,6 +4,7 @@ import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
 
 export const metadata: Metadata = {
+  alternates: { canonical: '/audio' },
   title: 'Morse Code Audio Translator - Listen & Decode Sound',
   description:
     'Free Morse code audio translator. Convert text to Morse code audio, play it at adjustable speed, and learn to decode Morse code by ear. No download needed.',
