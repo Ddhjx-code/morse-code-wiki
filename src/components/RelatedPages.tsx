@@ -10,6 +10,15 @@ const RELATED_LINKS = [
   { href: '/learn', label: 'Learn Morse Code', desc: 'Beginner guide' },
   { href: '/i-love-you', label: 'I Love You', desc: 'Romantic phrase translation' },
   { href: '/sos', label: 'SOS Signal', desc: 'Emergency signal guide' },
+  { href: '/morse-code-generator', label: 'Morse Code Generator', desc: 'Generate Morse from text' },
+  { href: '/morse-code-translator-to-english', label: 'Morse to English', desc: 'Decode Morse back to text' },
+  { href: '/international-morse-code-chart', label: 'International Chart', desc: 'ITU standard reference' },
+  { href: '/american-morse-code-chart', label: 'American Morse Chart', desc: 'Historic American Morse' },
+  { href: '/morse-code-chart-pdf', label: 'Chart PDF', desc: 'Printable PDF download' },
+  { href: '/letters-in-morse-code', label: 'Letters in Morse', desc: 'Every letter with audio' },
+  { href: '/numbers', label: 'Numbers in Morse', desc: 'Digits 0-9 reference' },
+  { href: '/hello', label: 'Hello in Morse', desc: 'Greeting translation' },
+  { href: '/morse-code-questions-and-answers', label: 'Morse Code FAQ', desc: 'Common questions' },
 ];
 
 function rotateFrom(path: string) {
