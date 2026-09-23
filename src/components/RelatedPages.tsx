@@ -12,8 +12,13 @@ const RELATED_LINKS = [
   { href: '/sos', label: 'SOS Signal', desc: 'Emergency signal guide' },
 ];
 
+function rotateFrom(path: string) {
+  const start = RELATED_LINKS.findIndex(l => l.href === path) + 1;
+  return [...RELATED_LINKS.slice(start), ...RELATED_LINKS.slice(0, start)];
+}
+
 export default function RelatedPages({ currentPath }: { currentPath: string }) {
-  const links = RELATED_LINKS.filter(l => l.href !== currentPath).slice(0, 6);
+  const links = rotateFrom(currentPath).filter(l => l.href !== currentPath).slice(0, 6);
 
   return (
     <section className="mt-12 border-t border-gray-800 pt-8">
