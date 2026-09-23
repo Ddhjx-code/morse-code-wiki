@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import PracticeGame from './PracticeGame';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/practice' },
@@ -58,6 +59,7 @@ export default function PracticePage() {
           </div>
         </div>
       </section>
+      <RelatedPages currentPath="/practice" />
       <AdBanner />
     </div>
   );

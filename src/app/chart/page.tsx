@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { CHAR_TO_MORSE } from '@/lib/morse';
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/chart' },
@@ -179,6 +180,7 @@ export default function ChartPage() {
           </Link>
         </div>
       </section>
+      <RelatedPages currentPath="/chart" />
       <AdBanner />
     </div>
   );

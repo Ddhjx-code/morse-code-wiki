@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 import MorseTranslator from '@/components/MorseTranslator';
 import { buildMetadata } from '@/lib/metadata';
 
@@ -159,6 +160,7 @@ export default function MorseCodeToEnglishPage() {
         </div>
       </section>
 
+      <RelatedPages currentPath="/morse-code-translator-to-english" />
       <AdBanner />
     </div>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import HelloAudio from './HelloAudio';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/hello' },
@@ -132,6 +133,7 @@ export default function HelloPage() {
           </Link>
         </div>
       </section>
+      <RelatedPages currentPath="/hello" />
       <AdBanner />
     </div>
   );

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 import MorseAudioButton from '@/components/MorseAudioButton';
 import { CHAR_TO_MORSE, textToMorse } from '@/lib/morse';
 import { buildMetadata } from '@/lib/metadata';
@@ -178,6 +179,7 @@ export default function LettersInMorseCodePage() {
         </div>
       </section>
 
+      <RelatedPages currentPath="/letters-in-morse-code" />
       <AdBanner />
     </div>
   );

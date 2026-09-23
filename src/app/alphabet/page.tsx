@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { CHAR_TO_MORSE } from '@/lib/morse';
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/alphabet' },
@@ -216,6 +217,7 @@ export default function AlphabetPage() {
           </Link>
         </div>
       </section>
+      <RelatedPages currentPath="/alphabet" />
       <AdBanner />
     </div>
   );

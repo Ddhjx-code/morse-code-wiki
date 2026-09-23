@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
@@ -180,6 +181,7 @@ export default function MorseCodeQuestionsPage() {
         </div>
       </section>
 
+      <RelatedPages currentPath="/morse-code-questions-and-answers" />
       <AdBanner />
     </div>
   );

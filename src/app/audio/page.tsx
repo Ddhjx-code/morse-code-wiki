@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import AudioTranslator from './AudioTranslator';
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/audio' },
@@ -93,6 +94,7 @@ export default function AudioPage() {
           </Link>
         </div>
       </section>
+      <RelatedPages currentPath="/audio" />
       <AdBanner />
     </div>
   );

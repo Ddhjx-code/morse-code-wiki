@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import ILoveYouAudio from './ILoveYouAudio';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/i-love-you' },
@@ -153,6 +154,7 @@ export default function ILoveYouPage() {
           </Link>
         </div>
       </section>
+      <RelatedPages currentPath="/i-love-you" />
       <AdBanner />
     </div>
   );
