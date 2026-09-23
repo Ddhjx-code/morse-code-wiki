@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import SOSAudio from './SOSAudio';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/sos' },
@@ -154,6 +155,7 @@ export default function SOSPage() {
           </Link>
         </div>
       </section>
+      <RelatedPages currentPath="/sos" />
       <AdBanner />
     </div>
   );

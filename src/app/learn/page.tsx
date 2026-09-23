@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/learn' },
@@ -201,6 +202,7 @@ export default function LearnPage() {
           </Link>
         </div>
       </section>
+      <RelatedPages currentPath="/learn" />
       <AdBanner />
     </div>
   );

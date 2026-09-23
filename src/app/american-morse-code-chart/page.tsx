@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
@@ -245,6 +246,7 @@ export default function AmericanMorseCodeChartPage() {
         </div>
       </section>
 
+      <RelatedPages currentPath="/american-morse-code-chart" />
       <AdBanner />
     </div>
   );

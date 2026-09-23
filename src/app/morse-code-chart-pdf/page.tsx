@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 import { CHAR_TO_MORSE } from '@/lib/morse';
 import { buildMetadata } from '@/lib/metadata';
 
@@ -189,6 +190,7 @@ export default function MorseCodeChartPdfPage() {
         </div>
       </section>
 
+      <RelatedPages currentPath="/morse-code-chart-pdf" />
       <AdBanner />
     </div>
   );

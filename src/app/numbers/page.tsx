@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { CHAR_TO_MORSE } from '@/lib/morse';
 import AdBanner from '@/components/AdBanner';
+import RelatedPages from '@/components/RelatedPages';
 
 export const metadata: Metadata = {
   alternates: { canonical: '/numbers' },
@@ -143,6 +144,7 @@ export default function NumbersPage() {
           </Link>
         </div>
       </section>
+      <RelatedPages currentPath="/numbers" />
       <AdBanner />
     </div>
   );
