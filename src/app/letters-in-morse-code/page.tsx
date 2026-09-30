@@ -7,11 +7,11 @@ import { buildMetadata } from '@/lib/metadata';
 
 export const metadata = buildMetadata({
   path: '/letters-in-morse-code',
-  title: 'Letters in Morse Code - Complete A-Z Reference',
+  title: 'Letters in Morse Code - Patterns, Spoken Form and Length Rule',
   description:
-    'Every letter in Morse code, A to Z, with its pattern and spoken form. Includes the length rule that makes the alphabet easier to memorise and audio for the full alphabet.',
+    'Every letter in Morse code with its pattern, spoken form and the length rule that groups them - one letter of one element, four of two, seven of three. For the full grid including digits and punctuation use the Morse code alphabet page.',
   keywords:
-    'letters in morse code, morse code letters, alphabet in morse code, morse code alphabet, all letters in morse code, morse code a to z',
+    'letters in morse code, morse code letters, all letters in morse code, morse code a to z, letter patterns in morse, morse code letter sounds',
 });
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');

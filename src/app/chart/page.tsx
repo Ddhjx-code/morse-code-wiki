@@ -1,17 +1,17 @@
-import type { Metadata } from 'next';
 import { CHAR_TO_MORSE } from '@/lib/morse';
 import Link from 'next/link';
 import AdBanner from '@/components/AdBanner';
 import RelatedPages from '@/components/RelatedPages';
+import { buildMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  alternates: { canonical: '/chart' },
-  title: 'Morse Code Chart - Printable PDF Reference Sheet',
+export const metadata = buildMetadata({
+  path: '/chart',
+  title: 'Morse Code Chart - Printable Grid and Binary Tree',
   description:
-    'Free printable Morse code chart with letters A-Z, numbers 0-9, and common symbols. Download as PDF or print directly from your browser. Includes binary tree decoder.',
+    'A printable Morse code chart laid out as an A-Z grid, plus the binary tree decoder that finds any character by following dots left and dashes right. Print from the browser or download the dedicated PDF version.',
   keywords:
-    'morse code chart, morse code chart printable, morse code pdf, morse code reference, morse code tree, morse code printable free',
-};
+    'morse code chart, morse code chart printable, morse code tree, binary tree morse code, morse code chart blank, morse code signal tree',
+});
 
 const LETTERS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 const NUMBERS = '0123456789'.split('');

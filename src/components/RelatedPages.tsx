@@ -12,6 +12,7 @@ const RELATED_LINKS = [
   { href: '/sos', label: 'SOS Signal', desc: 'Emergency signal guide' },
   { href: '/morse-code-generator', label: 'Morse Code Generator', desc: 'Generate Morse from text' },
   { href: '/morse-code-translator-to-english', label: 'Morse to English', desc: 'Decode Morse back to text' },
+  { href: '/text-to-morse-code', label: 'Text to Morse Code', desc: 'Convert plain text into Morse' },
   { href: '/international-morse-code-chart', label: 'International Chart', desc: 'ITU standard reference' },
   { href: '/american-morse-code-chart', label: 'American Morse Chart', desc: 'Historic American Morse' },
   { href: '/morse-code-chart-pdf', label: 'Chart PDF', desc: 'Printable PDF download' },
