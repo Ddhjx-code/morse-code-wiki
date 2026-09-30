@@ -8,7 +8,8 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-3 text-sm">Tools</h3>
             <ul className="space-y-2">
-              <li><Link href="/" className="text-gray-400 hover:text-white text-sm">Translator</Link></li>
+              <li><Link href="/" className="text-gray-400 hover:text-white text-sm">Morse Code Translator</Link></li>
+              <li><Link href="/text-to-morse-code" className="text-gray-400 hover:text-white text-sm">Text to Morse Code</Link></li>
               <li><Link href="/audio" className="text-gray-400 hover:text-white text-sm">Audio Decoder</Link></li>
               <li><Link href="/tattoo-generator" className="text-gray-400 hover:text-white text-sm">Tattoo Generator</Link></li>
               <li><Link href="/practice" className="text-gray-400 hover:text-white text-sm">Practice</Link></li>
