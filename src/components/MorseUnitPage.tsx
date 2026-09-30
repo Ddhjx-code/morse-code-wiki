@@ -17,17 +17,64 @@ function findMirror(unit: MorseUnit): MorseUnit | undefined {
   return MORSE_UNITS.find(u => u.key !== unit.key && u.morse === reversed);
 }
 
+function findComplement(unit: MorseUnit): MorseUnit | undefined {
+  const swapped = unit.morse.replace(/[.-]/g, c => (c === '.' ? '-' : '.'));
+  return MORSE_UNITS.find(u => u.key !== unit.key && u.morse === swapped);
+}
+
 function findSameLength(unit: MorseUnit): MorseUnit[] {
   return MORSE_UNITS.filter(
     u => u.key !== unit.key && u.morse.length === unit.morse.length
   ).slice(0, 6);
 }
 
+function describePattern(morse: string) {
+  const runs: string[] = [];
+  for (const element of morse) {
+    const last = runs[runs.length - 1];
+    if (last && last.startsWith(element)) {
+      runs[runs.length - 1] = last + element;
+    } else {
+      runs.push(element);
+    }
+  }
+  const name = (symbol: string, count: number) =>
+    count === 1
+      ? `1 ${symbol === '.' ? 'dot' : 'dash'}`
+      : `${count} ${symbol === '.' ? 'dots' : 'dashes'}`;
+  return {
+    dots: (morse.match(/\./g) || []).length,
+    dashes: (morse.match(/-/g) || []).length,
+    first: morse[0] === '.' ? 'a dot' : 'a dash',
+    last: morse[morse.length - 1] === '.' ? 'a dot' : 'a dash',
+    palindromic: morse === morse.split('').reverse().join(''),
+    runs,
+    buildOrder: runs.map(run => name(run[0], run.length)).join(' then '),
+  };
+}
+
+function unitRef(u: MorseUnit) {
+  return (
+    <Link
+      href={`/${u.key.toLowerCase()}-in-morse-code`}
+      className="text-blue-400 hover:text-blue-300 underline"
+    >
+      {u.display} ({formatMorse(u.morse)})
+    </Link>
+  );
+}
+
+const PALINDROMIC_LETTERS = MORSE_UNITS.filter(
+  u => u.type === 'letter' && u.morse === u.morse.split('').reverse().join('')
+).length;
+
 export default function MorseUnitPage({ unit }: MorseUnitPageProps) {
   const mirror = findMirror(unit);
+  const complement = findComplement(unit);
   const sameLength = findSameLength(unit);
   const exampleMorse = textToMorse(unit.exampleWord);
   const kind = unit.type === 'letter' ? 'Letter' : 'Number';
+  const p = describePattern(unit.morse);
 
   return (
     <div className="py-12 px-4 max-w-4xl mx-auto">
@@ -101,6 +148,107 @@ export default function MorseUnitPage({ unit }: MorseUnitPageProps) {
             </p>
           )}
         </div>
+      </section>
+
+      <section className="mb-12">
+        <h2 className="text-2xl font-bold text-white mb-4">
+          Pattern Anatomy of {unit.display}
+        </h2>
+        <div className="overflow-x-auto mb-4">
+          <table className="w-full text-sm text-left border border-gray-800 rounded-lg overflow-hidden">
+            <tbody className="text-gray-300">
+              <tr className="border-b border-gray-800">
+                <td className="px-4 py-3 text-gray-500 w-1/3">Total elements</td>
+                <td className="px-4 py-3 font-medium text-white">{unit.morse.length}</td>
+              </tr>
+              <tr className="border-b border-gray-800">
+                <td className="px-4 py-3 text-gray-500">Dots / dashes</td>
+                <td className="px-4 py-3 font-medium text-white">
+                  {p.dots} dot{p.dots === 1 ? '' : 's'} and {p.dashes} dash
+                  {p.dashes === 1 ? '' : 'es'}
+                </td>
+              </tr>
+              <tr className="border-b border-gray-800">
+                <td className="px-4 py-3 text-gray-500">Opens and closes with</td>
+                <td className="px-4 py-3 font-medium text-white">
+                  {p.first} … {p.last}
+                </td>
+              </tr>
+              <tr className="border-b border-gray-800">
+                <td className="px-4 py-3 text-gray-500">Read backwards</td>
+                <td className="px-4 py-3 font-medium text-white">
+                  {p.palindromic
+                    ? 'the same pattern - it is its own mirror'
+                    : `a different character${mirror ? ` (${mirror.display})` : ''}`}
+                </td>
+              </tr>
+              {complement && (
+                <tr>
+                  <td className="px-4 py-3 text-gray-500">Dots and dashes swapped</td>
+                  <td className="px-4 py-3 font-medium text-white">
+                    becomes {complement.display} ({formatMorse(complement.morse)})
+                  </td>
+                </tr>
+              )}
+            </tbody>
+          </table>
+        </div>
+        {unit.type === 'number' ? (
+          <p className="text-gray-300 leading-relaxed">
+            Digits follow a counting rule rather than an arbitrary assignment, which makes the whole
+            set predictable from one example. {unit.display} sends{' '}
+            <span className="font-mono text-white">{p.runs.join(' ')}</span> —{' '}
+            {p.dots === 0 || p.dashes === 0
+              ? `five ${p.dots > 0 ? 'dots' : 'dashes'} and no ${p.dots > 0 ? 'dash' : 'dot'}`
+              : `in that order, ${p.buildOrder}`}
+            . Every digit is exactly five elements long, so a digit that comes back short or long is
+            a timing error rather than a missing element.
+          </p>
+        ) : p.palindromic ? (
+          <p className="text-gray-300 leading-relaxed">
+            {unit.display} is one of {PALINDROMIC_LETTERS} letters in the international table whose
+            pattern reads the same backwards, so a transmission reversed end to end still decodes as
+            the same letter. That property is what makes single-element and repeated-element
+            characters forgiving to hear and easy to mistype.
+          </p>
+        ) : (
+          <p className="text-gray-300 leading-relaxed">
+            {mirror && complement && mirror.key === complement.key ? (
+              <>
+                Reversing {unit.display} and swapping its dots for dashes both give{' '}
+                <Link
+                  href={`/${mirror.key.toLowerCase()}-in-morse-code`}
+                  className="text-blue-400 hover:text-blue-300 underline"
+                >
+                  {mirror.display} ({formatMorse(mirror.morse)})
+                </Link>
+                , so the same wrong character can arrive from two different mistakes.
+              </>
+            ) : mirror && complement ? (
+              <>
+                Two mechanical changes produce other real characters from {unit.display}: reversing
+                the order gives {unitRef(mirror)}, and swapping every dot for a dash gives{' '}
+                {unitRef(complement)}. Both pairs are worth learning together, because a receiver
+                that has lost the spacing cannot tell them apart on the pattern alone.
+              </>
+            ) : mirror || complement ? (
+              <>
+                One mechanical change turns {unit.display} into another character:{' '}
+                {(mirror ?? (complement as MorseUnit)).display} (
+                {formatMorse((mirror ?? (complement as MorseUnit)).morse)}) is reached by{' '}
+                {mirror ? 'reversing its element order' : 'swapping every dot for a dash'}, while
+                the other change leaves the table entirely.
+              </>
+            ) : (
+              <>
+                Neither reversing {formatMorse(unit.morse)} nor swapping its dots and dashes produces
+                another character in the international table, so a {unit.display} sent with the
+                spacing lost decodes as no letter at all — the receiver hears a break rather than a
+                wrong character.
+              </>
+            )}
+          </p>
+        )}
       </section>
 
       <section className="mb-12">
