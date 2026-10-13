@@ -43,7 +43,7 @@ export const LAST_UPDATED: Record<string, string> = {
   'love-in-morse-code': '2026-09-30',
   'm-in-morse-code': '2026-09-30',
   'morse-code-chart-pdf': '2026-09-23',
-  'morse-code-generator': '2026-09-23',
+  'morse-code-generator': '2026-10-13',
   'morse-code-questions-and-answers': '2026-09-23',
   'morse-code-translator-to-english': '2026-09-23',
   'n-in-morse-code': '2026-09-30',
