@@ -68,43 +68,7 @@ const structuredData = {
       url: BASE_URL,
       description: "Free Morse code tools: translator, alphabet chart, tattoo generator, audio decoder, and practice exercises.",
     },
-    {
-      "@type": "FAQPage",
-      mainEntity: [
-        {
-          "@type": "Question",
-          name: "What is Morse code?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Morse code is a communication method that encodes text characters as sequences of dots (·) and dashes (−). Developed in the 1830s by Samuel Morse and Alfred Vail, it remains used in amateur radio, aviation, and emergency signaling today.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How do you say I Love You in Morse code?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "I Love You in Morse code is: ·· / ·-·· --- ···- · / -·-- --- ··-. (I = ··, LOVE = ·-·· −−− ···− ·, YOU = −·−− −−− ··−)",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "What is SOS in Morse code?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "SOS in Morse code is ··· −−− ··· (three dots, three dashes, three dots). It is the international distress signal, sent as one continuous sequence without letter spacing.",
-          },
-        },
-        {
-          "@type": "Question",
-          name: "How to translate text to Morse code online?",
-          acceptedAnswer: {
-            "@type": "Answer",
-            text: "Use a free online Morse code translator like MorseCodeNow. Simply type your text and the translation appears instantly. You can also play the Morse code as audio and copy the result.",
-          },
-        },
-      ],
-    },
+    ,
   ],
 };
 
