@@ -27,43 +27,34 @@ function pretty(code: string): string {
   return code.replace(/\./g, '·').replace(/-/g, '−');
 }
 
+const FAQS = [
+  {
+    q: 'How do I write my name in Morse code?',
+    a: 'Type it into the box above. Names are handled the same as any word, letter by letter. If the name carries an accent or a hyphen, note that the hyphen has its own pattern (-....-) while an accented letter does not appear in the international table and will be dropped.',
+  },
+  {
+    q: 'Can I copy the result?',
+    a: 'Yes. The copy button puts the ASCII form - dots as full stops, dashes as hyphens, one space between characters and " / " between words - on your clipboard. That is the format other tools and logging software expect. If you want the dotted · and − rendering for a bracelet or tattoo, use the tattoo page, which draws that version for you.',
+  },
+  {
+    q: 'Is Morse code still used?',
+    a: 'The distress call it replaced has not been used on ships since 1999, but the code survives on amateur radio bands, in aviation navigation identifiers (VOR and ILS stations transmit their three-letter names in Morse), and as an accessibility method when voice or a screen is not available.',
+  },
+  {
+    q: 'What is the difference between Morse code and SOS?',
+    a: 'SOS is one specific message, not an alphabet. It is sent as ···---··· in a single unbroken run so it cannot be mistaken for the letters S, O, S spaced apart. Details on the SOS page.',
+  },
+
+];
+
 const faqSchema = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
-  mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'How do you write text in Morse code?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Replace each letter, digit or supported punctuation mark with its international Morse pattern, put one space between the patterns of consecutive characters, and put a slash surrounded by spaces between words. HELLO becomes .... · .-.. .-.. --- with the single gaps already in place.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What separates letters from words in Morse code?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Timing separates them, not symbols. Inside a character the gap is one dot-length. Between characters it is three dot-lengths. Between words it is seven. In text form that becomes one space between characters and a " / " between words.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Does this converter handle punctuation?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Yes, twenty punctuation marks are mapped: . , ? \' ! / ( ) & : ; = + - _ " $ @ and the accented-accent forms used by the international table. Anything outside that table is dropped rather than guessed at, so an apostrophe in a name will appear as the Morse apostrophe while an em dash will vanish.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'Why does my Morse output decode back wrong?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'Almost always because the character gaps were lost. Morse is a variable-length code, so a run of dots and dashes with no gaps has many valid readings. Restore the single spaces between characters and the word slashes and it resolves uniquely.',
-      },
-    },
-  ],
+  mainEntity: FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
 };
 
 export default function TextToMorseCodePage() {
@@ -218,24 +209,7 @@ export default function TextToMorseCodePage() {
       <section className="mb-12">
         <h2 className="text-2xl font-bold text-white mb-4">Common Questions</h2>
         <div className="space-y-4">
-          {[
-            {
-              q: 'How do I write my name in Morse code?',
-              a: 'Type it into the box above. Names are handled the same as any word, letter by letter. If the name carries an accent or a hyphen, note that the hyphen has its own pattern (-....-) while an accented letter does not appear in the international table and will be dropped.',
-            },
-            {
-              q: 'Can I copy the result?',
-              a: 'Yes. The copy button puts the ASCII form - dots as full stops, dashes as hyphens, one space between characters and " / " between words - on your clipboard. That is the format other tools and logging software expect. If you want the dotted · and − rendering for a bracelet or tattoo, use the tattoo page, which draws that version for you.',
-            },
-            {
-              q: 'Is Morse code still used?',
-              a: 'The distress call it replaced has not been used on ships since 1999, but the code survives on amateur radio bands, in aviation navigation identifiers (VOR and ILS stations transmit their three-letter names in Morse), and as an accessibility method when voice or a screen is not available.',
-            },
-            {
-              q: 'What is the difference between Morse code and SOS?',
-              a: 'SOS is one specific message, not an alphabet. It is sent as ···---··· in a single unbroken run so it cannot be mistaken for the letters S, O, S spaced apart. Details on the SOS page.',
-            },
-          ].map(({ q, a }) => (
+          {FAQS.map(({ q, a }) => (
             <div key={q} className="bg-gray-900 border border-gray-800 rounded-lg p-5">
               <h3 className="font-semibold text-white mb-1">{q}</h3>
               <p className="text-gray-400 text-sm leading-relaxed">{a}</p>
