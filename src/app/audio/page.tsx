@@ -171,6 +171,18 @@ export default function AudioPage() {
           </Link>{' '}
           covers the receiving side of that trade.
         </p>
+        <p className="text-gray-400 mt-3">
+          For where to find live Morse rather than a recording - scheduled practice stations,
+          internet-connected receivers you can tune from a browser, and the aviation beacons that
+          still send their identifiers in code - see{" "}
+          <Link
+            href="/listen-to-morse-code-transmissions"
+            className="text-blue-400 hover:text-blue-300 underline"
+          >
+            how to listen to real Morse code transmissions
+          </Link>
+          .
+        </p>
       </section>
 
       <section className="mt-12">

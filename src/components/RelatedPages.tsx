@@ -6,6 +6,7 @@ const RELATED_LINKS = [
   { href: '/alphabet', label: 'Alphabet A-Z', desc: 'Complete character reference' },
   { href: '/chart', label: 'Printable Chart', desc: 'Download or print reference' },
   { href: '/tattoo-generator', label: 'Tattoo Generator', desc: 'Design Morse code tattoos' },
+  { href: '/listen-to-morse-code-transmissions', label: 'Listen Live', desc: 'Real Morse on air and online' },
   { href: '/practice', label: 'Practice Quiz', desc: 'Learn by listening' },
   { href: '/learn', label: 'Learn Morse Code', desc: 'Beginner guide' },
   { href: '/i-love-you', label: 'I Love You', desc: 'Romantic phrase translation' },

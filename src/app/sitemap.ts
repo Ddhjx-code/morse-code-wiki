@@ -26,6 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/i-love-you`, lastModified: at('i-love-you'), changeFrequency: 'yearly', priority: 0.8 },
     { url: `${BASE_URL}/tattoo-generator`, lastModified: at('tattoo-generator'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/practice`, lastModified: at('practice'), changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/listen-to-morse-code-transmissions`, lastModified: at('listen-to-morse-code-transmissions'), changeFrequency: 'monthly' as const, priority: 0.9 },
     { url: `${BASE_URL}/sos`, lastModified: at('sos'), changeFrequency: 'yearly', priority: 0.7 },
     { url: `${BASE_URL}/numbers`, lastModified: at('numbers'), changeFrequency: 'yearly', priority: 0.7 },
     { url: `${BASE_URL}/hello`, lastModified: at('hello'), changeFrequency: 'yearly', priority: 0.6 },
