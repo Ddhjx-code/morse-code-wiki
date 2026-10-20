@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   alternates: { canonical: '/privacy' },
   title: 'Privacy Policy - MorseCodeNow',
   description:
-    'Privacy Policy for MorseCodeNow.com. Learn how we handle data, cookies, third-party advertising, and analytics. We do not collect personal information.',
+    'Privacy Policy for MorseCodeNow.com. Learn how we handle data, cookies and Google Analytics. The Site runs no third-party advertising and collects no personal information.',
   keywords: 'privacy policy, morsecodenow privacy, cookie policy',
 };
 
@@ -46,36 +46,15 @@ export default function PrivacyPage() {
 
         <h2 className="text-2xl font-bold text-white mt-8">3. Third-Party Advertising</h2>
         <p className="text-gray-400">
-          We may partner with third-party advertising vendors, including <strong className="text-white">Google AdSense</strong>,
-          to display advertisements on the Site.
+          The Site does not display third-party advertising. No advertising network is loaded on any
+          page, and no data is shared with an ad provider.
         </p>
-        <ul className="text-gray-400 space-y-2">
-          <li>
-            Third-party vendors, including Google, use cookies to serve ads based on your prior visits to
-            this website and/or other websites on the Internet.
-          </li>
-          <li>
-            Google&apos;s use of advertising cookies enables it and its partners to serve ads to you based on
-            your visit to our Site and/or other sites on the Internet.
-          </li>
-          <li>
-            Google uses the <strong className="text-white">DoubleClick DART cookie</strong> to serve ads to users
-            based on their visits to this Site and other sites on the Internet.
-          </li>
-          <li>
-            You may opt out of personalized advertising by visiting{' '}
-            <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-              Google Ads Settings
-            </a>.
-          </li>
-          <li>
-            Alternatively, you can opt out of some third-party vendors&apos; use of cookies for personalized
-            advertising by visiting{' '}
-            <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:underline">
-              www.aboutads.info
-            </a>.
-          </li>
-        </ul>
+        <p className="text-gray-400">
+          If we introduce advertising at any point, this policy will be updated to name the provider
+          and describe what it collects <em>before</em> the first ad is served. Until then, the
+          cookies described in this policy come from the Site itself and from the analytics service
+          listed below.
+        </p>
 
         <h2 className="text-2xl font-bold text-white mt-8">4. Analytics</h2>
         <p className="text-gray-400">
