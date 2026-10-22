@@ -124,9 +124,9 @@ export default function TattooGeneratorPage() {
       <section className="mt-12">
         <h2 className="text-2xl font-bold text-white mb-3">Spacing Is the Design, Not the Decoration</h2>
         <p className="text-gray-400 mb-4">
-          Morse carries meaning in the gaps between marks as much as in the marks. The standard proportions
-          are: a dash three dots long, a one-dot gap inside a letter, a three-dot gap between letters, and a
-          seven-dot gap between words. Those ratios are defined for signal timing, and a tattoo cannot
+          Morse carries meaning in the gaps between marks as much as in the marks. The proportions in{" "}
+          {<a href="https://www.itu.int/dms_pubrec/itu-r/rec/m/R-REC-M.1677-0-200405-S!!PDF-E.pdf" rel="noopener" target="_blank" className="text-blue-400 hover:text-blue-300">Recommendation ITU-R M.1677-0</a>}, section 2, are: a dash three dots long, a one-dot gap inside a letter, a three-dot gap
+          between letters, and a seven-dot gap between words. Those ratios are defined for signal timing, and a tattoo cannot
           literally have duration — but it is the only reference a careful artist has for how much wider a
           word break should be than a letter break.
         </p>

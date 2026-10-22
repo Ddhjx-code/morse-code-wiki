@@ -92,8 +92,11 @@ export default function PuzzlesPage() {
             word that feeds a second cipher — rather than being the whole prize.
           </li>
           <li>
-            <strong className="text-white">Send it slowly.</strong> Around 5 to 8 words per minute is readable
-            for people who have never touched the code. Our{" "}
+            <strong className="text-white">Send it slowly.</strong> Speed is counted in words per minute,
+            where one word is defined as fifty dot-lengths, so a single unit lasts 240 ms at 5 WPM and
+            150 ms at 8. That puts a four-element letter at roughly 1.7 seconds and just over a second,
+            which is about how long a first-timer needs to copy a group down. The 5 to 8 WPM figure quoted
+            in puzzle guides is that arithmetic rather than a rule. Our{" "}
             <Link href="/audio" className="text-blue-400 hover:text-blue-300">audio page</Link> goes down to
             5 WPM, so a clue can be generated at exactly the speed players will hear.
           </li>
@@ -160,8 +163,12 @@ export default function PuzzlesPage() {
         <p className="text-gray-400">
           Some of your players will read Morse from memory — amateur radio operators, former scouts, and a
           disproportionate number of escape-room regulars who picked up a handful of codes along the way. A
-          designer&apos;s note on this from the room-escape community is that a code a player can decode
-          before they were meant to can break the order of a game. Two safe fixes: put the key before the
+          design guidance from{" "}
+          <a href="https://roomescapeartist.com/2016-10-23/better-ways-to-handle-letter-codes-in-escape-rooms-design-tips/"
+             rel="noopener" target="_blank" className="text-blue-400 hover:text-blue-300">
+            the room-escape community
+          </a>{" "}
+          is that a code a player can decode before they were meant to can break the order of a game. Two safe fixes: put the key before the
           coded message so the expert merely solves it early at the right place, or do not gate a critical
           sequence behind a standard code at all. A made-up symbol set has none of these problems.
         </p>

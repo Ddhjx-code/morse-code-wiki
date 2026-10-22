@@ -6,6 +6,7 @@ const NAV_ITEMS = [
   { href: '/alphabet', label: 'Alphabet' },
   { href: '/chart', label: 'Chart' },
   { href: '/tattoo-generator', label: 'Tattoo' },
+  { href: '/morse-code-bracelet', label: 'Bracelet' },
   { href: '/practice', label: 'Practice' },
   { href: '/learn', label: 'Learn' },
 ];

@@ -77,9 +77,9 @@ export default function PatternsPage() {
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-white mb-3">Why the Same Marks Mean Several Things</h2>
         <p className="text-gray-400 mb-4">
-          Morse stores meaning in gaps as well as in marks. The standard fixes the proportions: a dash is
-          three dots long, the gap inside one letter is one dot, the gap between letters is three dots, and
-          the gap between words is seven. Remove those gaps and a run of marks stops being one message.
+          Morse stores meaning in gaps as well as in marks. {<a href="https://www.itu.int/dms_pubrec/itu-r/rec/m/R-REC-M.1677-0-200405-S!!PDF-E.pdf" rel="noopener" target="_blank" className="text-blue-400 hover:text-blue-300">Recommendation ITU-R M.1677-0</a>}, section 2, fixes the proportions: a
+          dash is three dots long, the gap inside one letter is one dot, the gap between letters is three
+          dots, and the gap between words is seven. Remove those gaps and a run of marks stops being one message.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm border border-gray-800 rounded-lg overflow-hidden">
@@ -132,8 +132,15 @@ export default function PatternsPage() {
             mostly one to four elements, so a long run is several letters, not one.</li>
           <li>Look for the five-element trap. Any group of five is a digit, never a letter, which is why
             padlock clues in escape rooms are so often Morse numbers.</li>
-          <li>Check the length distribution against the index above: patterns with more dots than dashes
-            cluster at the start of the alphabet in frequency, not in the code.</li>
+          <li>Count elements before you commit. Only six characters in the whole set are one or two marks
+            long — <code className="font-mono text-gray-300">E</code>,{" "}
+            <code className="font-mono text-gray-300">T</code>,{" "}
+            <code className="font-mono text-gray-300">I</code>,{" "}
+            <code className="font-mono text-gray-300">A</code>,{" "}
+            <code className="font-mono text-gray-300">M</code> and{" "}
+            <code className="font-mono text-gray-300">N</code>, and four of those (E, T, I, M) are pure
+            dots or pure dashes. A long run cannot be built out of them alone, so a reading that is all
+            one-mark characters means a gap has been dropped.</li>
           <li>If the text is meant to be English, use the words it has to be. The{" "}
             <Link href="/morse-code-translator-to-english" className="text-blue-400 hover:text-blue-300">
               Morse-to-text page
