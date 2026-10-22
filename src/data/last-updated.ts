@@ -52,7 +52,7 @@ export const LAST_UPDATED: Record<string, string> = {
   'numbers': '2026-10-13',
   'o-in-morse-code': '2026-09-30',
   'p-in-morse-code': '2026-09-30',
-  'practice': '2026-09-23',
+  'practice': '2026-10-22',
   'privacy': '2026-10-20',
   'q-in-morse-code': '2026-09-30',
   'r-in-morse-code': '2026-09-30',
