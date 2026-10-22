@@ -137,7 +137,7 @@ export default function PracticePage() {
         <h3 className="text-lg font-semibold text-white mb-2">1. The truncated beginning</h3>
         <p className="text-gray-400 mb-3">
           The letter <strong className="text-white">E is a single dot, and it is the opening of
-          17 other characters</strong> in this set — {'17-L'} letters and {'17-D'} digits start
+          17 other characters</strong> in this set — 12 letters and 5 digits start
           with a dot. If you answer the moment you hear one dot, you are guessing across
           {'17'} possibilities.
         </p>
