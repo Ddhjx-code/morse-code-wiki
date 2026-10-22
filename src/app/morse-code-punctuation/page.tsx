@@ -117,9 +117,9 @@ export default function PunctuationPage() {
           exists only as spacing, and spacing is precisely what a tattoo or a bead strand loses.
         </p>
         <p className="text-gray-400 mb-3">
-          <strong className="text-white">There is no semicolon in the standard</strong>, though most charts
-          print one, and there is no em dash, no asterisk and no brackets of any kind beyond the two round
-          ones listed above.
+          <strong className="text-white">The semicolon is not named in the 2004 recommendation&apos;s
+          list</strong>, though it appears on most charts and is in wide use, and there is no em dash, no
+          asterisk and no bracket beyond the two round parentheses listed above.
         </p>
         <p className="text-gray-400">
           If you are encoding something that leans on this kind of mark — a sentence that trails off, a line

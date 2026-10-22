@@ -2,12 +2,24 @@
 // character or letter combination it can legally represent.
 import { CHAR_TO_MORSE } from "./morse";
 
-/** All code patterns known to this site, longest first for segmentation. */
-const CODES = [...new Set(Object.values(CHAR_TO_MORSE))];
+/**
+ * Letters and digits only - the 36 characters this page indexes.
+ *
+ * Punctuation is deliberately excluded from the segmentation universe. If it
+ * were included, a run could be cut at, say, a six-element period pattern, and
+ * the reading counts below would no longer match the table a reader is looking
+ * at. Marks are covered on their own page instead.
+ */
+const CODES = [...new Set(
+  Object.entries(CHAR_TO_MORSE)
+    .filter(([ch]) => /^[A-Z0-9]$/.test(ch))
+    .map(([, code]) => code),
+)];
 const MAX_LEN = Math.max(...CODES.map((c) => c.length));
 
 const REVERSE: Record<string, string[]> = {};
 for (const [ch, code] of Object.entries(CHAR_TO_MORSE)) {
+  if (!/^[A-Z0-9]$/.test(ch)) continue;
   (REVERSE[code] ??= []).push(ch);
 }
 
