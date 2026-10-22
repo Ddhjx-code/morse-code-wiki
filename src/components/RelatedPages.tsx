@@ -20,6 +20,10 @@ const RELATED_LINKS = [
   { href: '/letters-in-morse-code', label: 'Letters in Morse', desc: 'Every letter with audio' },
   { href: '/numbers', label: 'Numbers in Morse', desc: 'Digits 0-9 reference' },
   { href: '/hello', label: 'Hello in Morse', desc: 'Greeting translation' },
+  { href: '/morse-code-bracelet', label: 'Bracelet Patterns', desc: 'Bead counts and spacing' },
+  { href: '/morse-code-punctuation', label: 'Punctuation', desc: 'Which marks really exist' },
+  { href: '/morse-code-patterns', label: 'Pattern Lookup', desc: 'What a run of dots means' },
+  { href: '/morse-code-for-puzzles', label: 'Puzzles and Rooms', desc: 'Morse as an escape-room clue' },
   { href: '/morse-code-questions-and-answers', label: 'Morse Code FAQ', desc: 'Common questions' },
 ];
 

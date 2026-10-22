@@ -20,6 +20,9 @@ export default function Footer() {
             <ul className="space-y-2">
               <li><Link href="/alphabet" className="text-gray-400 hover:text-white text-sm">Alphabet A-Z</Link></li>
               <li><Link href="/chart" className="text-gray-400 hover:text-white text-sm">Printable Chart</Link></li>
+              <li><Link href="/morse-code-bracelet" className="text-gray-400 hover:text-white text-sm">Morse Code Bracelet</Link></li>
+              <li><Link href="/morse-code-punctuation" className="text-gray-400 hover:text-white text-sm">Punctuation</Link></li>
+              <li><Link href="/morse-code-patterns" className="text-gray-400 hover:text-white text-sm">Pattern Lookup</Link></li>
               <li><Link href="/numbers" className="text-gray-400 hover:text-white text-sm">Numbers 0-9</Link></li>
             </ul>
           </div>
@@ -34,6 +37,7 @@ export default function Footer() {
           <div>
             <h3 className="text-white font-semibold mb-3 text-sm">About</h3>
             <ul className="space-y-2">
+              <li><Link href="/morse-code-for-puzzles" className="text-gray-400 hover:text-white text-sm">Morse Code Puzzles</Link></li>
               <li><Link href="/learn" className="text-gray-400 hover:text-white text-sm">Learn Morse Code</Link></li>
               <li><Link href="/about" className="text-gray-400 hover:text-white text-sm">About</Link></li>
               <li><Link href="/privacy" className="text-gray-400 hover:text-white text-sm">Privacy Policy</Link></li>
