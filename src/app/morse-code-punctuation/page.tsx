@@ -194,6 +194,48 @@ export default function PunctuationPage() {
         </ul>
       </section>
 
+
+      <section className="mb-10">
+        <h2 className="text-sm font-semibold uppercase tracking-wider text-gray-500 mb-3">
+          Sources for this page
+        </h2>
+        <ul className="space-y-2 text-sm text-gray-500">
+          <li>
+            <a
+              href="https://www.itu.int/dms_pubrec/itu-r/rec/m/R-REC-M.1677-0-200405-S!!PDF-E.pdf"
+              rel="noopener"
+              target="_blank"
+              className="text-blue-400 hover:text-blue-300"
+            >
+              Recommendation ITU-R M.1677-0 (PDF)
+            </a>
+            — the 2004 text whose sections 1.1.1 to 1.1.3 list the letters, figures and named marks, and
+            section 2 gives the dash and gap ratios quoted above.
+          </li>
+          <li>
+            <a href="https://www.voanews.com/a/a-13-a-2004-04-22-42-1-67495127/282534.html"
+               rel="noopener" target="_blank" className="text-blue-400 hover:text-blue-300">
+              VOA report on the at sign, April 2004
+            </a>
+            — the contemporaneous coverage behind the &quot;first new signal since World War II&quot; claim,
+            including operators&apos; wish for an exclamation mark.
+          </li>
+          <li>
+            <a href="https://alexwlchan.net/notes/2025/arobase-in-morse-code/" rel="noopener"
+               target="_blank" className="text-blue-400 hover:text-blue-300">
+              Note on the 2004 date
+            </a>
+            — which traces the widely repeated &quot;added in 2009&quot; version back to the later revision of
+            the recommendation rather than the addition itself.
+          </li>
+        </ul>
+        <p className="text-xs text-gray-600 mt-3">
+          Codes on this page are read from the same table the{" "}
+          <Link href="/alphabet" className="text-blue-400 hover:text-blue-300">alphabet page</Link> uses, so
+          a mark is shown exactly as this site sends it. Where the recommendation is silent, this page says
+          so rather than presenting a chart convention as a standard.
+        </p>
+      </section>
       <RelatedPages currentPath="/morse-code-punctuation" />
       <AdBanner />
     </div>
