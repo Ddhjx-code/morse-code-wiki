@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 const NAV_ITEMS = [
   { href: '/', label: 'Translator' },
+  { href: '/morse-code-converter', label: 'Converter' },
   { href: '/audio', label: 'Audio' },
   { href: '/alphabet', label: 'Alphabet' },
   { href: '/chart', label: 'Chart' },

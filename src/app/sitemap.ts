@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${BASE_URL}/american-morse-code-chart`, lastModified: at('american-morse-code-chart'), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/morse-code-chart-pdf`, lastModified: at('morse-code-chart-pdf'), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/morse-code-translator-to-english`, lastModified: at('morse-code-translator-to-english'), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/morse-code-converter`, lastModified: new Date('2026-11-11'), changeFrequency: 'monthly', priority: 0.95 },
     { url: `${BASE_URL}/text-to-morse-code`, lastModified: at('text-to-morse-code'), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${BASE_URL}/letters-in-morse-code`, lastModified: at('letters-in-morse-code'), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/morse-code-generator`, lastModified: at('morse-code-generator'), changeFrequency: 'monthly', priority: 0.8 },
